@@ -1,0 +1,65 @@
+        int option;
+        printf("Choose operation:\n1)insert\n2)my_remove\n3)height\n4)my_search\n5)min\n6)max\n7)inorder\n8)preorder\n9)postorder\n10)exit\nEnter option:");
+        scanf("%d",&option);
+        if(option==1)
+        {
+            int value;
+            printf("Enter value :");
+            scanf("%d",&value);
+            root = insert(root,value);
+        }
+        else if(option==2)
+        {
+             int value;
+            printf("Enter value :");
+            scanf("%d",&value);
+            root = my_remove(root,value);
+        }
+        else if(option==3)
+        {
+            printf("Height : %d\n",height(root));
+        }
+        else if(option==4)
+        {
+             int value;
+            printf("Enter value :");
+            scanf("%d",&value);
+            int result = my_search(root,value);
+            if(result==0)
+                printf("my_search result : not found!\n");
+            else
+                printf("my_search result : element found!\n");
+        }
+        else if(option == 5)
+        {
+            printf("Min Value : %d\n",find_min(root));
+        }
+        else if(option == 6)
+            printf("Max Value : %d\n",find_max(root));
+        else if(option==7)
+           {
+
+                printf("Elements : ");
+            inorder_traversal(root);
+            printf("\n");
+           }
+        else if(option==8)
+        {
+             printf("Elements : ");
+            pre_traversal(root);
+            printf("\n");
+        }
+        else if(option == 9)
+        {
+             printf("Elements : ");
+            post_traversal(root);
+            printf("\n");
+        }
+        else
+         break;
+    }
+    return 0;
+}
+
+
+
