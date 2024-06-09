@@ -21,7 +21,7 @@ void printArr(int a[], int n)
 }  
 int main()  
 {  
-    int a[] = { 12, 31, 25, 8, 32, 17 };  
+    int a[] = { 52, 35, 15, 28, 12, 47 };  
     int n = sizeof(a) / sizeof(a[0]);  
     printf("Before sorting array elements are - \n");  
     printArr(a, n);  
